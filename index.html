@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* CSS resets and base styles */
+        :root {
+            --primary-color: #333;
+            --secondary-color: #e0e0e0;
+            --accent-color: #007bff;
+            --table-header: #2c3e50; /* A slightly softer dark color for the table header */
+            --table-row-even: #fdfdfd;
+            --table-row-hover: #eaf2f8; /* A light blue hover effect */
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Slightly deeper shadow for depth */
+            padding: 30px; /* Increased padding */
+            border-radius: 12px; /* Softer border-radius */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* --- Header Area --- */
+        header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        
+        .personal-photo {
+            width: 100px;  
+            height: 100px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-right: 25px;
+            border: 3px solid #fff; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+    
+
+        .personal-details h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: var(--primary-color);
+        }
+
+        .personal-details p {
+            margin: 5px 0 0 0;
+            color: #666;
+            font-size: 1em;
+        }
+
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .grid-item {
+            border: 1px solid var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fafafa; /* Very faint background to distinguish sections */
+        }
+
+        .grid-item h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 8px;
+            font-weight: 600;
+        }
+
+        ol.education-list, ul.skills-hobbies-list {
+            padding-left: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        
+        .table-section {
+            border: none; 
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .table-section h3 {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        .styled-table {
+            width: 100%;
+            border-collapse: separate; 
+            border-spacing: 0; 
+            border-radius: 8px; 
+            overflow: hidden; 
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        
+        .styled-table thead tr {
+            background-color: var(--table-header);
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .styled-table th, .styled-table td {
+            padding: 15px 20px; /* Generous padding for an airy feel */
+            border-bottom: 1px solid #eee; /* Light horizontal line between all rows */
+        }
+
+        /* Content Row Styling */
+        .styled-table tbody tr {
+            transition: background-color 0.2s ease; /* Smooth hover transition */
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: var(--table-row-even);
+        }
+
+        /* Hover Effect: The table looks more interactive and attractive */
+        .styled-table tbody tr:hover {
+            background-color: var(--table-row-hover);
+            cursor: pointer;
+        }
+
+        /* Make the very last row's bottom border clean */
+        .styled-table tbody tr:last-of-type td {
+            border-bottom: 2px solid var(--table-header);
+        }
+
+        /* --- Footer (Contacts) --- */
+        footer {
+            border-top: 2px solid var(--secondary-color);
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        footer h3 {
+            margin-top: 0;
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            font-size: 2.2em;
+        }
+
+        .social-icons a {
+            color: #777; /* Softer initial color */
+            margin: 0 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px); /* Subtle lift on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <header>
+            <img src="my-photo.jpeg" alt="Your Name" class="personal-photo">
+            <div class="personal-details">
+                <h1>BYARUHANGA ROBERT</h1>
+                <p>byaruhangarobert062@gmail.com | (256) 756-814993</p>
+            </div>
+        </header>
+
+        <div class="info-grid">
+            
+            <div class="grid-item">
+                <h3>Education Background</h3>
+                <ol class="education-list">
+                    <li>Bachelor of Information Technology and Computing<br><span style="font-size:0.9em;color:#777;">Kyambogo University, 2024-2027</span></li>
+                    <li>Uganda Advanced Certificate of Education<br><span style="font-size:0.9em;color:#777;">St. Mathias Kalemba S.S, 2017-2020</span></li>
+                    <li>Uganda Certificate of Education<br><span style="font-size:0.9em;color:#777;">St. Mathias Kalemba S.S, 2021-2023</span></li>
+                </ol>
+            </div>
+
+            <div class="grid-item">
+                <h3>Skills & Hobbies</h3>
+                <ul class="skills-hobbies-list">
+                    <strong>Skills</strong>
+                    <li>Networking</li>
+                     <li>System Administration</li>
+                     <br>
+                    <strong>Hobbies</strong> 
+                    <li>Travel Photography</li>
+                    <li>Music Streaming</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid-item table-section">
+            <h3>Featured Projects</h3>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Role</th>
+                        <th>Key Technologies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Personal Portfolio V1</strong></td>
+                        <td>Project Leader</td>
+                        <td>HTML, CSS, Git</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Community Food Map</strong></td>
+                        <td>Full Stack Developer</td>
+                        <td>Python (Django), React, Leaflet.js</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Task Scheduler</strong></td>
+                        <td>UI/UX Designer & Dev</td>
+                        <td>Figma, React, Node.js</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <h3>Contact Me</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
